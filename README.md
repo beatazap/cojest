@@ -1,1 +1,1 @@
-# ifis-programowanie-ii-2021
+# Programowanie 2

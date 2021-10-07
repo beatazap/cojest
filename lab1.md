@@ -21,20 +21,20 @@
 
 ### Zadanie 1
 
-Zaimplementuj taki obiekt w Pythonie
+Dokonaj analizy obiektu pod kątem cech, atrybutów, funkcji:
 
 ![pudełko](./img/pudelko.png)
 
 
 ### Zadanie 2
 
-Zaimplementuj taki obiekt w Pythonie
+Dokonaj analizy obiektu pod kątem cech, atrybutów, funkcji:
 
 ![pudełko](./img/kosmita.png)
 
 
 ### Zadanie 3
 
-Zaimplementuj taki obiekt w Pythonie
+Dokonaj analizy obiektu pod kątem cech, atrybutów, funkcji:
 
 ![pudełko](./img/rakieta.png)

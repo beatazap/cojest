@@ -34,6 +34,22 @@ p2.name = 'Kevin'
 
 print(f"{p1.name}, {p2.name}")
 ```
+
+```python
+# Definicja klasy
+class Student:
+    name = None
+    def introduce(self):
+        print(f"Hello! My name is {self.name}.")
+
+# Tworzenie nowego obiektu
+s1 = Student()
+# Przypisanie wartości dla zmiennej name "znajdującej się" w obiekcie s1
+s1.name = 'Gorgio'
+# Wywołanie funkcji (metody) obiektu s1
+s1.introduce()
+```
+
 ## Zadania
 
 ### Zadanie 1

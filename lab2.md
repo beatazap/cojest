@@ -13,16 +13,26 @@
 🔍 - poszukaj w internecie
 
 ## Wprowadzenie
-Klasa to zdefiniowany zbiór atrybutów i funkcji (metod).
+Klasa to zdefiniowany zbiór atrybutów i funkcji (metod). Nowy obiekt stworzony z danej klasy nazywamy **instancją**. Interakcja z pozostałymi obiektami odbywa się przez wcześniej zdefiniowane metody.
 
-### Tworzenie obiektów z klasy
+### minimalna definicja klasy
+Aby zdefiniować klasę należy użyć słowa kluczowego `class`, dowolną nazwę (najlepiej zaczynającą się z dużej litery) oraz dwukropek.
+```python
+class Nazwa:
+    pass
+```
 
+Słowo kluczowe `pass` odgrywa tutaj kluczową rolę, w Pythonie nie ma możliwości pozostawienia pustej definicji klasy/funkcji oraz bloku instrukcji sterowania.
+
+### Tworzenie instacji z klasy
+
+przykład:
 ```python
 # Definicja klasy
 class Person:
     name = None
 
-# Tworzenie nowego obiektu
+# Tworzenie nowego obiektu (nowej instancji)
 p1 = Person()
 p2 = Person()
 
@@ -35,6 +45,10 @@ p2.name = 'Kevin'
 print(f"{p1.name}, {p2.name}")
 ```
 
+
+### Definiowanie metod klasy
+
+Przykład:
 ```python
 # Definicja klasy
 class Student:
@@ -50,11 +64,63 @@ s1.name = 'Gorgio'
 s1.introduce()
 ```
 
+przykład:
+```python
+# Definicja klasy
+class Person:
+    name = None
+    def __init__(self, name):
+        self.name = name
+    
+    def change_name(self, new_name):
+        self.name = new_name
+        
+    def print_name(self):
+        print(f"My name is {self.name}.")
+    
+
+# Tworzenie nowego obiektu (nowej instancji)
+p1 = Person('Jordan')
+p2 = Person('Kevin')
+
+p2.print_name()
+
+p1.change_name('Kenny')
+
+print(f"{p1.name}, {p2.name}")
+```
+
+przykład:
+```python
+# Definicja klasy
+class Person:
+    name = None
+    def __init__(self, name):
+        self.name = name
+    
+    def change_name(self, new_name):
+        self.name = new_name
+        
+    def __str__(self):
+        return self.name
+    
+
+# Tworzenie nowego obiektu (nowej instancji)
+p1 = Person('Jordan')
+p2 = Person('Kevin')
+
+p2.print_name()
+
+p1.change_name('Kenny')
+
+print(f"{p1}, {p2}")
+```
+
 ## Zadania
 
 ### Zadanie 1
 
-Zaimplementuj obiekt w Pythonie zgodnie z ustaleniami z poprzednich zajęć:
+Zaimplementuj klasę w Pythonie zgodnie z ustaleniami z poprzednich zajęć:
 
 ![pudełko](./img/pudelko.png)
 
@@ -63,7 +129,7 @@ Zaimplementuj obiekt w Pythonie zgodnie z ustaleniami z poprzednich zajęć:
 
 ### Zadanie 2
 
-Zaimplementuj obiekt w Pythonie zgodnie z ustaleniami z poprzednich zajęć:
+Zaimplementuj klasę w Pythonie zgodnie z ustaleniami z poprzednich zajęć:
 
 ![kosmita](./img/kosmita.png)
 
@@ -73,7 +139,7 @@ Zaimplementuj obiekt w Pythonie zgodnie z ustaleniami z poprzednich zajęć:
 
 ### Zadanie 3
 
-Zaimplementuj obiekt w Pythonie zgodnie z ustaleniami z poprzednich zajęć:
+Zaimplementuj klasę w Pythonie zgodnie z ustaleniami z poprzednich zajęć:
 
 ![rakieta](./img/rakieta.png)
 
@@ -81,4 +147,12 @@ Zaimplementuj obiekt w Pythonie zgodnie z ustaleniami z poprzednich zajęć:
 * Rakieta powinna posiadać zmienną `fuel`.
 * Rakieta powinna definiować funkcję która policzy ile paliwa zostanie zużyte aby wzbić się na wysokość `h`.
 
+### Zadanie 4
+
+Utwórz klasę `CrazyStrings` która będzie udostęniać następujące metody:
+* `__init__` z parametrem `name`.
+* `leet` która wyświetli tekst w stylu Leet. (https://pl.wikipedia.org/wiki/Leet_speak).
+* `poke` który wyświetli tekst naprzemiennie zmieniając litery na małe i duże. 
+* `random` która wyświetli tekst w losowym stylu.
+* 🌟 Dodaj własny styl.
 

@@ -53,13 +53,15 @@ Przykład:
 # Definicja klasy
 class Student:
     name = None
+    gpa = 0.0
     def introduce(self):
-        print(f"Hello! My name is {self.name}.")
+        print(f"Hello! My name is {self.name} and my GPA is {gpa}/4.0 .")
 
 # Tworzenie nowego obiektu
 s1 = Student()
 # Przypisanie wartości dla zmiennej name "znajdującej się" w obiekcie s1
-s1.name = 'Gorgio'
+s1.name = 'Paul'
+s1.gpa = 5
 # Wywołanie funkcji (metody) obiektu s1
 s1.introduce()
 ```

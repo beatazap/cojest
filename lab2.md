@@ -122,14 +122,6 @@ print(f"{p1}, {p2}")
 
 ### Zadanie 1
 
-Zaimplementuj klasę w Pythonie zgodnie z ustaleniami z poprzednich zajęć:
-
-![pudełko](./img/pudelko.png)
-
-* Pudełko powinno posiadać zmienną `size` do przechowywania jego rozmiaru (w formie krotki: LENGTH, WIDTH, HEIGHT).
-* Ilość obiektów przechowywana przez pudełko, powinna być ograniczona przez jego rozmiar (zmienna `size`). 
-
-### Zadanie 2
 
 Zaimplementuj klasę w Pythonie zgodnie z ustaleniami z poprzednich zajęć:
 
@@ -139,7 +131,7 @@ Zaimplementuj klasę w Pythonie zgodnie z ustaleniami z poprzednich zajęć:
 * Kosmita powinien posiadać zmienną `age` do przechowywania jego wieku.
 * Kosmita powinien posiadać zmienną `planet` do przechowywania numeru planety na której żyje (licząc od słońca).
 
-### Zadanie 3
+### Zadanie 2
 
 Zaimplementuj klasę w Pythonie zgodnie z ustaleniami z poprzednich zajęć:
 
@@ -149,12 +141,22 @@ Zaimplementuj klasę w Pythonie zgodnie z ustaleniami z poprzednich zajęć:
 * Rakieta powinna posiadać zmienną `fuel`.
 * Rakieta powinna definiować funkcję która policzy ile paliwa zostanie zużyte aby wzbić się na wysokość `h`.
 
-### Zadanie 4
+### Zadanie 3
+
+Zaimplementuj klasę w Pythonie zgodnie z ustaleniami z poprzednich zajęć:
+
+![pudelko](./img/pudelko.png)
+
+* Pudełko powinno posiadać zmienną `size` do przechowywania jego rozmiaru (w formie krotki: LENGTH, WIDTH, HEIGHT).
+* Ilość obiektów przechowywana przez pudełko, powinna być ograniczona przez jego rozmiar (zmienna `size`). 
+
+
+### 🌟 Zadanie 4
 
 Utwórz klasę `CrazyStrings` która będzie udostęniać następujące metody:
 * `__init__` z parametrem `text`.
 * `leet` która wyświetli tekst w stylu Leet. (https://pl.wikipedia.org/wiki/Leet_speak).
 * `poke` który wyświetli tekst naprzemiennie zmieniając litery na małe i duże. 
-* `random` która wyświetli tekst w losowym stylu.
-* 🌟 Dodaj własny styl.
+* `random` która wyświetli tekst w losowym stylu (dwóch powyższych).
+*  Dodaj własny styl.
 

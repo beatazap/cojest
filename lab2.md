@@ -45,8 +45,30 @@ p2.name = 'Kevin'
 print(f"{p1.name}, {p2.name}")
 ```
 
+### Konstruktor
+Bardzo ważnym elementem tworzenia klasy jest konstruktor. Konstruktor jest to metoda `__init__` która definiuje jakie parametry przyjmuje nasza klasa. 
+Metoda `__init__` (oraz większość metod definiowanych w klasie) zawsze powinna posiadać przynajmniej jeden argument `self`, umieszczony na początku listy arugmentów.
 
-### Definiowanie metod klasy
+Argument `self` odnosi się do konkretnej instancji obiektu, poprzez `self` uzyskujemy dostęp do zmiennych i innych metod danej klasy.
+
+przykład:
+```python
+# Definicja klasy
+class Person:
+    name = None
+    def __init__(self, name):
+        self.name = name
+    
+
+# Tworzenie nowego obiektu (nowej instancji)
+p1 = Person('Jordan')
+p2 = Person('Kevin')
+
+print(f"{p1.name}, {p2.name}")
+```
+
+
+#### Definiowanie metod klasy
 
 Przykład:
 ```python
@@ -66,31 +88,6 @@ s1.gpa = 5
 s1.introduce()
 ```
 
-przykład:
-```python
-# Definicja klasy
-class Person:
-    name = None
-    def __init__(self, name):
-        self.name = name
-    
-    def change_name(self, new_name):
-        self.name = new_name
-        
-    def print_name(self):
-        print(f"My name is {self.name}.")
-    
-
-# Tworzenie nowego obiektu (nowej instancji)
-p1 = Person('Jordan')
-p2 = Person('Kevin')
-
-p2.print_name()
-
-p1.change_name('Kenny')
-
-print(f"{p1.name}, {p2.name}")
-```
 
 przykład:
 ```python

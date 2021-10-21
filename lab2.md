@@ -77,7 +77,7 @@ class Student:
     name = None
     gpa = 0.0
     def introduce(self):
-        print(f"Hello! My name is {self.name} and my GPA is {gpa}/4.0 .")
+        print(f"Hello! My name is {self.name} and my GPA is {self.gpa}/4.0 .")
 
 # Tworzenie nowego obiektu
 s1 = Student()

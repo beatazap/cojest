@@ -100,6 +100,9 @@ class Person:
     def change_name(self, new_name):
         self.name = new_name
         
+    def print_name(self):
+        print(f"My name is {self.name}")
+        
     def __str__(self):
         return self.name
     

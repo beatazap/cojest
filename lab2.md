@@ -149,7 +149,7 @@ Zaimplementuj klasę w Pythonie zgodnie z ustaleniami z poprzednich zajęć:
 ### Zadanie 4
 
 Utwórz klasę `CrazyStrings` która będzie udostęniać następujące metody:
-* `__init__` z parametrem `name`.
+* `__init__` z parametrem `text`.
 * `leet` która wyświetli tekst w stylu Leet. (https://pl.wikipedia.org/wiki/Leet_speak).
 * `poke` który wyświetli tekst naprzemiennie zmieniając litery na małe i duże. 
 * `random` która wyświetli tekst w losowym stylu.

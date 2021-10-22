@@ -55,7 +55,6 @@ przykład:
 ```python
 # Definicja klasy
 class Person:
-    name = None
     def __init__(self, name):
         self.name = name
     
@@ -74,8 +73,9 @@ Przykład:
 ```python
 # Definicja klasy
 class Student:
-    name = None
-    gpa = 0.0
+    def __init__(self, name, gpa):
+        self.name = name
+        self.gpa = gpa
     def introduce(self):
         print(f"Hello! My name is {self.name} and my GPA is {self.gpa}/4.0 .")
 
@@ -93,7 +93,6 @@ przykład:
 ```python
 # Definicja klasy
 class Person:
-    name = None
     def __init__(self, name):
         self.name = name
     

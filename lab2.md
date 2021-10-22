@@ -49,7 +49,7 @@ print(f"{p1.name}, {p2.name}")
 Bardzo ważnym elementem tworzenia klasy jest konstruktor. Konstruktor jest to metoda `__init__` która definiuje jakie parametry przyjmuje nasza klasa. 
 Metoda `__init__` (oraz większość metod definiowanych w klasie) zawsze powinna posiadać przynajmniej jeden argument `self`, umieszczony na początku listy arugmentów.
 
-Argument `self` odnosi się do konkretnej instancji obiektu, poprzez `self` uzyskujemy dostęp do zmiennych i innych metod danej klasy.
+Argument `self` jest referencją do instancji obiektu (do samego siebie). Poprzez `self` uzyskujemy dostęp do zmiennych i innych metod danego obiektu.
 
 przykład:
 ```python

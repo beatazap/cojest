@@ -148,6 +148,7 @@ Zaimplementuj klasę w Pythonie zgodnie z ustaleniami z poprzednich zajęć:
 
 * Pudełko powinno posiadać zmienną `size` do przechowywania jego rozmiaru (w formie krotki: LENGTH, WIDTH, HEIGHT).
 * Ilość obiektów przechowywana przez pudełko, powinna być ograniczona przez jego rozmiar (zmienna `size`). 
+* Dodaj metodę `put_in` z parametrem `other_box`, metoda `put_in` powinna sprawdzać czy rozmiar pudełka które chcemy umieścić wewnątrz jest mniejszy od wolnej przestrzeni.
 
 
 ### 🌟 Zadanie 4

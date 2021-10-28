@@ -12,7 +12,7 @@
 
 🔍 - poszukaj w internecie
 
-## Zadania
+## Zadanie
 
 Stwórz skrypt do obsługi Banku.
 

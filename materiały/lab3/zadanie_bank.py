@@ -3,11 +3,7 @@ import random
 # https://docs.python.org/3.9/tutorial/floatingpoint.html 
 from decimal import *
 getcontext().prec = 4
-import random
-# https://docs.python.org/3.9/library/decimal.html
-# https://docs.python.org/3.9/tutorial/floatingpoint.html 
-from decimal import *
-getcontext().prec = 4
+
 
 class Bank:
     def __init__(self, name):

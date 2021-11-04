@@ -36,7 +36,34 @@ make_noice(d)
 make_noice(c)
 ```
 
+### Zadanie
+✏️ Napisz skrypt w którym różne dwie klasy będą definiowały wspólny interfejs, stwórz listę różnych obiektów a następnie przeinteruj po niej i wywołaj odpowiednią metodę. 
+
 📖 Proszę przeczytać https://docs.python.org/3.9/reference/datamodel.html aby dowiedzieć się więcej.
 
 ## Magiczne Metody
-Metody specjalne potocznie nazywanej "magicznymi metodami". 
+Metody specjalne potocznie nazywane "magicznymi metodami", są te metody klasy dzięki którym określamy jej (typ) oraz relacje z innymi obiektami.
+
+Wybrane magiczne metody:
+* `__init__` - metoda wykorzystywana jako konstruktor obiektu, w niej podajemy parametry dla nowej instancji klasy.
+* `__new__` - metoda tworząca nową instancję klasy, wykorzysytwana wraz z wzorcem projektowym [Singleton](https://pl.wikipedia.org/wiki/Singleton_(wzorzec_projektowy)). 
+
+* `__str__` - metoda wywoływana przez wbudowaną funkcję `str`, `print` lub `format`.
+* `__repr__` - metoda wywoływana przez wbudowaną funkcję `repr`, zwraca oficjalny string reprezentujący obiekt.
+
+
+* `__eq__` - metoda wywoływana w trakcie porównania obiektów przez operator `==`.
+* `__ne__` - metoda wywoływana w trakcie porównania obiektów przez operator `!=`.
+* `__lt__` - metoda wywoływana w trakcie porównania obiektów przez operator `<`.
+* `__gt__` - metoda wywoływana w trakcie porównania obiektów przez operator `>`.
+* 
+* `__hash__` - metoda wywoływana przez wbudowaną funkcję `hash`, dzięki temu nasz obiekt może być przechowywany w `set` lub użyty jako klucz w `dict`.
+
+* `__add__` - metoda wywoływana w trakcie wywołania operatora `+` na obiektach. 
+* `__getitem__` - metoda wywoływana w trakcie wywołania `obiekt[klucz]`.
+
+* `__slots__` - specjalna zmienna wykorzystywana do określenia atrybutów i metod. jakie klasa udostępnia. 
+
+### Zadanie
+✏️ Napisz skrypt w którym zaimplementujesz klasę odpowiadającą pionką na szachownicy. Pionki powinno dać się posortować względem ich wagi.
+⚠️ Stwórz klasę ChessBoard i klasę Pawn.

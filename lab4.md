@@ -65,5 +65,9 @@ Wybrane magiczne metody:
 * `__slots__` - specjalna zmienna wykorzystywana do określenia atrybutów i metod. jakie klasa udostępnia. 
 
 ### Zadanie
+
+✏️ Stwórz klasę która zaimplementuje specjalną metodę `__add__` oraz `__lt__`.
+
 ✏️ Napisz skrypt w którym zaimplementujesz klasę odpowiadającą pionką na szachownicy. Pionki powinno dać się posortować względem ich wagi.
+
 ⚠️ Stwórz klasę ChessBoard i klasę Pawn.

@@ -47,22 +47,17 @@ Metody specjalne potocznie nazywane "magicznymi metodami", są te metody klasy d
 Wybrane magiczne metody:
 * `__init__` - metoda wykorzystywana jako konstruktor obiektu, w niej podajemy parametry dla nowej instancji klasy.
 * `__new__` - metoda tworząca nową instancję klasy, wykorzysytwana wraz z wzorcem projektowym [Singleton](https://pl.wikipedia.org/wiki/Singleton_(wzorzec_projektowy)). 
-
 * `__str__` - metoda wywoływana przez wbudowaną funkcję `str`, `print` lub `format`.
 * `__repr__` - metoda wywoływana przez wbudowaną funkcję `repr`, zwraca oficjalny string reprezentujący obiekt.
-
-
 * `__eq__` - metoda wywoływana w trakcie porównania obiektów przez operator `==`.
 * `__ne__` - metoda wywoływana w trakcie porównania obiektów przez operator `!=`.
 * `__lt__` - metoda wywoływana w trakcie porównania obiektów przez operator `<`.
 * `__gt__` - metoda wywoływana w trakcie porównania obiektów przez operator `>`.
-
 * `__len__` - metoda wywołowana przez wbudowaną funkcję `len`.
-* `__hash__` - metoda wywoływana przez wbudowaną funkcję `hash`, dzięki temu nasz obiekt może być przechowywany w `set` lub użyty jako klucz w `dict`.
-
+* `__iter__` - metoda wywoływana przez wbudowaną funkcję `iter` lub pętlę `for`.
+* `__next__` - metoda wywoływana przez wbudowaną funkcję `next`.
 * `__add__` - metoda wywoływana w trakcie wywołania operatora `+` na obiektach. 
 * `__getitem__` - metoda wywoływana w trakcie wywołania `obiekt[klucz]`.
-
 * `__slots__` - specjalna zmienna wykorzystywana do określenia atrybutów i metod. jakie klasa udostępnia. 
 
 ### Zadanie

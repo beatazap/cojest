@@ -56,7 +56,8 @@ Wybrane magiczne metody:
 * `__ne__` - metoda wywoływana w trakcie porównania obiektów przez operator `!=`.
 * `__lt__` - metoda wywoływana w trakcie porównania obiektów przez operator `<`.
 * `__gt__` - metoda wywoływana w trakcie porównania obiektów przez operator `>`.
-* 
+
+* `__len__` - metoda wywołowana przez wbudowaną funkcję `len`.
 * `__hash__` - metoda wywoływana przez wbudowaną funkcję `hash`, dzięki temu nasz obiekt może być przechowywany w `set` lub użyty jako klucz w `dict`.
 
 * `__add__` - metoda wywoływana w trakcie wywołania operatora `+` na obiektach. 

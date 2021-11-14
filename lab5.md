@@ -12,3 +12,9 @@
 
 🔍 - poszukaj w internecie
 
+
+## Metody statyczne 
+
+## Dziedziczenie
+
+### Polimorfizm

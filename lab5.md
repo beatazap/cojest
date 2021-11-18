@@ -89,6 +89,10 @@ print(f"Zeszyt Arnolda formatu {arnolds_notebook.paper_size} służy mu do przed
 print(f"Zeszyt Jimmiego formatu {jimmys_notebook.paper_size} służy mu do przedmiotu {jimmys_notebook.subject}")
 ```
 
+### Badanie typu obiektu
+Do sprawdzenia czy dany obiekt jest powiązany z klasą używamy wbudowanej funkcji `isinstance(object, classinfo)`.
+https://docs.python.org/3/library/functions.html#isinstance
+
 ## Dziedziczenie
 Dziedziczenie jest ważnym elementem programowania obiektowego, pozwalające nam na definiowanie klasy która dziedziczy po klasie bazowej jej atrybuty i metody.
 
@@ -115,10 +119,11 @@ rekin = Ryba('Rekin Młot')
 print(sowa.gatunek) 
 print(rekin.gatunek) 
 ```
+
 Ważnym elementem programowania zorientowanego obiektowo w Pythonie jest funkcja `super()`. 
 Użycie tej funkcji wewnątrz metody daje nam dostęp do właściwości klasy nadrzędnej (rodzica).
 
-Przykład 2:
+Przykład:
 ```python
 class FreeUser:
     def __init__(self, username, is_paid=False):
@@ -149,7 +154,30 @@ class PaidUser(FreeUser):
             print("Do paid stuff for corporate.")
             
 
+arnold = PaidUser('arnold', 'hobbyist', True)
+
+arnold.doPaidStuff()
 ```
+
+Przykład z sprawdzeniem typu obiektu:
+```python
+arnold = PaidUser('arnold', 'hobbyist', True)
+
+if isinstance(arnold, PaidUser):
+    print("Zmienna arnold jest typu PaidUser")
+
+if isinstance(arnold, FreeUser):
+    print("Zmienna arnold jest typu FreeUser")
+
+john = FreeUser('john', False)
+    
+if isinstance(john, PaidUser):
+    print("Zmienna john jest typu PaidUser")
+
+if isinstance(john, FreeUser):
+    print("Zmienna john jest typu FreeUser")   
+```
+
 **Zadanie**
 
 ✏️ Napisz klasę `Student` oraz klasę dziedziczącą po niej `GraduatedStudent`. Nadaj im odpowiednie atrybuty.
@@ -267,7 +295,32 @@ print(s.to_json())
 
 ✏️ Napisz domieszkę `FromJSONMixin`, powinna ona udostępniać metodą pozwalającą na wczytywanie wartości atrybutów z pliku JSON.
 
-## Metody statyczne i klasy
+## Metody statyczne i klasowe
+
+### Metoda statyczna
+`@staticmethod` jest wbudowanym dekoratem który podmienia daną metodę. 
+Metoda statyczna jest powiązana z klasą w której się znajduje i **nie posiada** dostępu do atrybutów klasy. 
+Nie jest wymagane podawanie żadnych parametrów. 
+
+```python
+from datetime import datetime
+
+class Data:
+    def __init__(self, rok, miesiac, dzien):
+        self.rok = rok
+        self.miesiac = miesiac
+        self.dzien = dzien
+    
+    @staticmethod
+    def wypisz(data):
+        print(f"{data.rok}-{data.miesiac}-{data.dzien}")
+                
+```
+
+### Metoda klasowa
+`@classmethod` jest wbudowanym dekoratem który podmienia daną metodę. 
+Metoda klasowa jest powiązana z klasą w której się znajduje i **posiada** dostęp do jej atrybutów.
+Pierwszym parametrem w metodzie klasowej jest (musi być) `cls`, który odnosi się do klasy a nie instancji konkretnego obiektu. 
 
 ```python
 from datetime import datetime

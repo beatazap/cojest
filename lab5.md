@@ -232,7 +232,7 @@ Wynik:
 
 **Zadanie**
 
-✏️ Stwórz klasę `Samochod`, a następnie utwórz trzy klasy `Luksusowe`, `Sportowe`, `Rodzinne` które będą dziedziczyć po klasie samochód. Zdefiniuj odpowiednie atrybuty dla każdej z klas.
+✏️ Stwórz klasę `Car`, a następnie utwórz trzy klasy `SUV`, `Sport`, `MiniVan` które będą dziedziczyć po klasie `Car`. Zdefiniuj odpowiednie atrybuty dla każdej z klas.
 
 ### Domieszki (MixIn)
 Domieszka to bardzo uproszczona definicja klasy która skupia się na zdefiniowaniu metod pomocniczych. Sama w sobie nie posiada żadnych atrybutów a jedynie wykorzystuje do swojego działania atrybuty z klasy nadrzędnej.

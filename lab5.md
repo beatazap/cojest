@@ -150,9 +150,13 @@ class PaidUser(FreeUser):
             
 
 ```
+**Zadanie**
+
+✏️ Napisz klasę `SortedList`, powinna ona dziedziczyć po klasie listy, rozbudują ją tak by lista była posortowana po każdym dodaniu nowego elementu.
+
 
 ### Polimorfizm
-
+Polimorfizm jest niczym innym jak dziedziczeniem po więcej niż jednej klasie. 
 
 ```python
 class Zwierze:
@@ -177,7 +181,54 @@ class Dziobak(Plywajace, Chodzace):
     
 class Kaczka(Plywajace, Chodzace, Latajace):
     pass
+    
+kaczka = Kaczka('Pospolita')
+dziobak = Dziobak('Australijski') 
 
+kaczka.plywam()
+kaczka.chodze()
+kaczka.latam()
+
+dziobak.chodze()
+dziobak.plywam()
+```
+
+⚠️ Bardzo ważna jest kolejność w jakiej klasa dziedziczy po innych klasach.
+
+Przykład:
+```python
+class A:
+    def method(self):
+        print("Klasa A")
+
+class B:
+    def method(self):
+        print("Klasa B")    
+        
+class C(A, B):
+    pass
+    
+class D(B, A):
+    pass
+       
+c = C()
+c.method()
+
+d = D()
+d.method()
+```
+
+Wywoływana metoda jest wyszukiwana od lewej do prawej. Informacje o kolejności wyszukania metod są zawarte w specjalnej zmiennej klasowej `__mro__` (Method Resolution Order).
+
+```python
+print(C.__mro__)
+print(D.__mro__)
+```
+Wynik:
+
+```
+(<class '__main__.C'>, <class '__main__.A'>, <class '__main__.B'>, <class 'object'>)
+(<class '__main__.D'>, <class '__main__.B'>, <class '__main__.A'>, <class 'object'>)
 ```
 
 ### Domieszki (MixIn)
@@ -207,6 +258,12 @@ print(s.to_json())
 
 ```
 
+**Zadanie**
+
+✏️ Napisz domieszkę `AddableMixin`, powinna ona udostępniać metodą pozwalającą na dodawanie dwóch obiektów do siebie.
+
+✏️ Napisz domieszkę `FromJSONMixin`, powinna ona udostępniać metodą pozwalającą na wczytywanie wartości atrybutów z pliku JSON.
+
 ## Metody statyczne i klasy
 
 ```python
@@ -224,4 +281,7 @@ class Data:
         return cls(dzis.year, dzis.month, dzis.day)
         
 ```
-        
+
+✏️ Napisz metodę klasy dla klasy `Data` zwracającą nowy obiekt z datą wczorajszą.
+
+✏️ Napisz metodę statyczną dla klasy `Data` zmieniającą datę zapisaną w stringu w formacie USA "MM/DD/YYYY" na format europejski "DD/MM/YYYY". 

@@ -152,8 +152,7 @@ class PaidUser(FreeUser):
 ```
 **Zadanie**
 
-✏️ Napisz klasę `SortedList`, powinna ona dziedziczyć po klasie `collections.Sequence`, rozbudują ją tak by lista była posortowana po każdym dodaniu nowego elementu.
-
+✏️ Napisz klasę `Student` oraz klasę dziedziczącą po niej `GraduatedStudent`. Nadaj im odpowiednie atrybuty.
 
 ### Polimorfizm
 Polimorfizm jest niczym innym jak dziedziczeniem po więcej niż jednej klasie. 
@@ -221,8 +220,8 @@ d.method()
 Wywoływana metoda jest wyszukiwana od lewej do prawej. Informacje o kolejności wyszukania metod są zawarte w specjalnej zmiennej klasowej `__mro__` (Method Resolution Order).
 
 ```python
-print(C.__mro__)
-print(D.__mro__)
+print(C.__mro__) #
+print(D.__mro__) # można też użyć D.mro() -> [__main__.D, __main__.B, __main__.A, object]
 ```
 Wynik:
 
@@ -230,6 +229,10 @@ Wynik:
 (<class '__main__.C'>, <class '__main__.A'>, <class '__main__.B'>, <class 'object'>)
 (<class '__main__.D'>, <class '__main__.B'>, <class '__main__.A'>, <class 'object'>)
 ```
+
+**Zadanie**
+
+✏️ Stwórz klasę `Samochod`, a następnie utwórz trzy klasy `Luksusowe`, `Sportowe`, `Rodzinne` które będą dziedziczyć po klasie samochód. Zdefiniuj odpowiednie atrybuty dla każdej z klas.
 
 ### Domieszki (MixIn)
 Domieszka to bardzo uproszczona definicja klasy która skupia się na zdefiniowaniu metod pomocniczych. Sama w sobie nie posiada żadnych atrybutów a jedynie wykorzystuje do swojego działania atrybuty z klasy nadrzędnej.

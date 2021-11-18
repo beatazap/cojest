@@ -312,9 +312,12 @@ class Data:
         self.dzien = dzien
     
     @staticmethod
-    def wypisz(data):
-        print(f"{data.rok}-{data.miesiac}-{data.dzien}")
-                
+    def czy_dzisiejsza(rok, miesiac, dzien):
+        dzis = datetime.now()
+        return rok == dzis.year and miesiac == dzis.month and dzien == dzis.day
+
+
+print(Data.czy_dzisiejsza(1997, 7, 18))  # sprawdzi czy podana data jest dzisiejsza.
 ```
 
 ### Metoda klasowa
@@ -335,7 +338,8 @@ class Data:
     def dzisiaj(cls):
         dzis = datetime.now()
         return cls(dzis.year, dzis.month, dzis.day)
-        
+
+d = Data.dzisiaj()  # Utworzy nową instancję obiektu z klasy Data z dzisiejszą datą.
 ```
 
 ✏️ Napisz metodę klasy dla klasy `Data` zwracającą nowy obiekt z datą wczorajszą.

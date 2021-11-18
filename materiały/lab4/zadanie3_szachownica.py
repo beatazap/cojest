@@ -10,4 +10,9 @@ class Figura:
         
 # TBD
 class Szachownica:
-    pass
+    def __init__(self):
+        self.figury = []
+    
+    def dodaj_figure(self, ranga, symbol):
+        figura = Figura(ranga, symbol)
+        self.figury.append(figura)

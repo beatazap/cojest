@@ -152,7 +152,7 @@ class PaidUser(FreeUser):
 ```
 **Zadanie**
 
-✏️ Napisz klasę `SortedList`, powinna ona dziedziczyć po klasie listy, rozbudują ją tak by lista była posortowana po każdym dodaniu nowego elementu.
+✏️ Napisz klasę `SortedList`, powinna ona dziedziczyć po klasie `collections.Sequence`, rozbudują ją tak by lista była posortowana po każdym dodaniu nowego elementu.
 
 
 ### Polimorfizm

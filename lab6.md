@@ -1,5 +1,6 @@
-Programowanie II - Lab 6
-Legenda
+# Programowanie II - Lab 6
+
+**Legenda**
 
 📖 - proszę przeczytać
 
@@ -11,4 +12,10 @@ Legenda
 
 🔍 - poszukaj w internecie
 
-# TBD
+# Środowiska wirtulane
+
+## Tworzenie
+
+## Zarządzanie
+
+## Zapisywanie wymagań

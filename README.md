@@ -23,8 +23,12 @@
 - [Laboratorium 8](lab8.md)
 - [Laboratorium 9](lab9.md)
 - [Laboratorium 10](lab10.md)
-- ...
-- [Laboratorium 15](lab15.md)
+- [Laboratorium 11](lab11.md)
+- Laboratorium 12: Praca nad projektem własnym
+- Laboratorium 13: Praca nad projektem własnym
+- Laboratorium 14: Praca nad projektem własnym/Zaliczenie projektów
+- Laboratorium 15: Zaliczenie projektów
+
  
 ## przydatne linki
 - https://www.python.org/doc/

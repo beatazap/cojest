@@ -18,7 +18,49 @@ Pozwala nam to na równocześną współpracę nad różnymi pod względem modu�
 
 Dzięki zastosowaniu wirtualnych środowisk jesteśmy w stanie ograniczyć problem z zależnościami bibliotek które mogą uniemożliwić nam uruchomienie naszego skryptu bądź programu. Problem ten uzyskał nawet własną nazwę ["Piekło zależności"](https://pl.wikipedia.org/wiki/Piek%C5%82o_zale%C5%BCno%C5%9Bci).
 
-## Tworzenie
+Do instalacji nowych bibliotek służy polecenie `pip`.
+
+### :memo: Lista przydatnych komend
+
+lista zainstalowanych modułów:
+```bash
+pip list
+```
+lista zainstalowanych modułów w składni dla komendy `pip install -r`.
+```bash
+pip freeze > requirements.txt  # zapisujemy informację zainstalowanych modułach do pliku requirements.txt
+```
+
+instalacja nowego modułu:
+```bash
+pip install [--user] [-U] nazwa_pakietu[==konkretna wersja]
+pip install -r requirements.txt   # instalujemy listę pakietów które znajdują się w pliku requirements.txt
+```
+
+Usunięcie modułu z środowiska:
+```bash
+pip uninstall nazwa_pakietu
+pip uninstall -r requirements.txt  # usunie listę pakietów które znajdują się w pliku requirements.txt
+```
+
+## Tworzenie przy pomocy modułu venv
+Aby utworzyć nowe środowisko należy użyć modułu `venv`, który jest integralną częścią pythona 3.X.
+
+### Tworzenie nowego środowiska
+Do stworzenia nowego środowiska wykorzystujemy następującą komendę:
+```cmd
+python -m venv venv
+```
+### Aktywacja środowiska
+W systemie linux/macos:
+```cmd
+venv/bin/activate
+```
+
+W systemie Windows:
+```cmd
+venv/Scripts/activate
+```
 
 ## Zarządzanie
 

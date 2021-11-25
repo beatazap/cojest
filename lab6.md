@@ -63,5 +63,13 @@ venv/Scripts/activate
 ```
 
 ## Zarządzanie
+Do zarządzania pakietami wykorzystujemy narzędzie `pip`, które jest dostarczane wraz z instalacją instancji python'a.
+
 
 ## Zapisywanie wymagań
+
+## Zadania
+
+✏️ Znajdź na internecie (na githubie) dowolne repozytorium kodu w Pythonie i spróbuj stworzyć środowisko potrzebne do jego developmentu.
+
+✏️ 

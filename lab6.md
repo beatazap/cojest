@@ -65,11 +65,34 @@ venv/Scripts/activate
 ## Zarządzanie
 Do zarządzania pakietami wykorzystujemy narzędzie `pip`, które jest dostarczane wraz z instalacją instancji python'a.
 
-
 ## Zapisywanie wymagań
+
 
 ## Zadania
 
 ✏️ Znajdź na internecie (na githubie) dowolne repozytorium kodu w Pythonie i spróbuj stworzyć środowisko potrzebne do jego developmentu.
 
-✏️ 
+✏️ Utwórz nowe środowisko w którym zainstalujesz biblioteki: 
+ * `ipython`
+ * `pandas`
+ * `numpy`
+ * `matplotlib`
+ * `plotly`
+ * `streamlit`
+ * `opencv-python`
+ * `tensorflow`
+
+Użyj w tym celu narzędzia `pip`.
+
+✏️ Wyekportuj zainstalowane biblioteki w nowo utworzonym środwisku do pliku `requirements.txt`.
+
+✏️ Utwórz kolejne środowisko tym razem z wykorzystaniem pliku `requirements.txt`.
+
+✏️ Utwórz nowe środowisko w którym zainstalujesz https://github.com/jazzband/pip-tools. Użyj narzędzi `pip-compile` i `pip-sync` (🔍 sprawdź dokumentacje na stronie) do zbudowania środowiska na potrzeby NLP (Natural Language Processing) zawierającego następujące biblioteki:
+
+* `ipython`
+* `jupyter`
+* `scikit-learn`
+* `matplotlib`
+
+✏️ Jaka jest różnica między narzędziami `pip` a `pip-tools`? Który Twoim zdaniem jest lepszy?

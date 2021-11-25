@@ -14,4 +14,4 @@
 
 # Zaawansowane Biblioteki
 
-## TBD
+## TensorFlow

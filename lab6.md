@@ -18,7 +18,7 @@ Pozwala nam to na równocześną współpracę nad różnymi pod względem modu�
 
 Dzięki zastosowaniu wirtualnych środowisk jesteśmy w stanie ograniczyć problem z zależnościami bibliotek które mogą uniemożliwić nam uruchomienie naszego skryptu bądź programu. Problem ten uzyskał nawet własną nazwę ["Piekło zależności"](https://pl.wikipedia.org/wiki/Piek%C5%82o_zale%C5%BCno%C5%9Bci).
 
-Do instalacji nowych bibliotek służy polecenie `pip`.
+Do zarządzania pakietami wykorzystujemy narzędzie `pip`, które jest dostarczane wraz z instalacją python'a.
 
 ### :memo: Lista przydatnych komend
 
@@ -63,10 +63,15 @@ venv/Scripts/activate
 ```
 
 ## Zarządzanie
-Do zarządzania pakietami wykorzystujemy narzędzie `pip`, które jest dostarczane wraz z instalacją instancji python'a.
+Istnieją również inne narzędzia do zarządzania wirtualnymi środowiskami takie jak `pipenv`, `virtualenv`, `conda`.
 
-## Zapisywanie wymagań
+📖 Proszę przeczytać https://github.com/pypa/pipenv.
 
+📖 Proszę przeczytać https://virtualenv.pypa.io/en/latest/.
+
+📖 Proszę przeczytać https://docs.python.org/3.9/tutorial/venv.html.
+
+📖 Proszę przeczytać https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html
 
 ## Zadania
 

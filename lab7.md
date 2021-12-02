@@ -78,6 +78,14 @@ Konfigurujemy go i pobieramy TOKEN.
 ![image](https://user-images.githubusercontent.com/77734214/144451064-c5491e0c-f4a0-4a0e-b15a-9efc2856bd39.png)
 
 
+#### Uprawnienia
+
+Bot posiada szereg uprawnień pozwalających na obsługę dodatkowych akcji, np. wyrzucenie użytkownika za karę z kanału za spamowanie.
+
+![image](https://user-images.githubusercontent.com/77734214/144453891-1166e4b6-1855-417b-b135-63509ea6db13.png)
+
+
+
 ### Minimalna wersja bota
 
 ```python
@@ -200,13 +208,6 @@ client.run('token')
 ```
 
 Źródło: https://github.com/Rapptz/discord.py/blob/v1.7.3/examples/new_member.py
-
-
-### Uprawnienia
-
-Bot posiada szereg uprawnień pozwalających na obsługę dodatkowych akcji, np. wyrzucenie użytkownika za karę z kanału za spamowanie.
-
-![image](https://user-images.githubusercontent.com/77734214/144453891-1166e4b6-1855-417b-b135-63509ea6db13.png)
 
 ### Uruchomienie
 Aby uruchomić bota (jeżeli plik nazywa się `bot.py`) wystarczy wpisać `python bot.py` w konsoli.

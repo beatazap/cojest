@@ -113,7 +113,6 @@ class MyClient(discord.Client):
         print(self.user.id)
         print('------')
 
-
     async def on_message(self, message):
         # we do not want the bot to reply to itself
         if message.author.id == self.user.id:

@@ -98,5 +98,109 @@ if __name__ == '__main__':
  
 ```
 
+### Bot z grą w zgadywanie
+
+```python
+import os
+import random
+import discord
+import asyncio
+
+class MyClient(discord.Client):
+    async def on_ready(self):
+        print('Logged in as')
+        print(self.user.name)
+        print(self.user.id)
+        print('------')
+
+class MyClient(discord.Client):
+    async def on_ready(self):
+        print('Logged on as {0}!'.format(self.user))
+
+    async def on_message(self, message):
+        # we do not want the bot to reply to itself
+        if message.author.id == self.user.id:
+            return
+
+        if message.content.startswith('$guess'):
+            await message.channel.send('Guess a number between 1 and 10.')
+
+            def is_correct(m):
+                return m.author == message.author and m.content.isdigit()
+
+            answer = random.randint(1, 10)
+
+            try:
+                guess = await self.wait_for('message', check=is_correct, timeout=5.0)
+            except asyncio.TimeoutError:
+                return await message.channel.send('Sorry, you took too long it was {}.'.format(answer))
+
+            if int(guess.content) == answer:
+                await message.channel.send('You are right!')
+            else:
+                await message.channel.send('Oops. It is actually {}.'.format(answer))
+
+```
+Źródło: https://github.com/Rapptz/discord.py/blob/v1.7.3/examples/guessing_game.py
+
+### Bot z zadaniem w tle
+
+```python
+import discord
+import asyncio
+
+class MyClient(discord.Client):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        # Utwórz i uruchom zadanie w tle
+        self.bg_task = self.loop.create_task(self.my_background_task())
+
+    async def on_ready(self):
+        print('Logged in as')
+        print(self.user.name)
+        print(self.user.id)
+        print('------')
+
+    async def my_background_task(self):
+        await self.wait_until_ready()
+        counter = 0
+        channel = self.get_channel(1234567) # ID kanału
+        while not self.is_closed():
+            counter += 1
+            await channel.send(counter)
+            await asyncio.sleep(60) # Zadanie jest wykonywane co 60 sekund
+```
+
+# Bot witający nowego członka
+Ten przykład wymaga włączenia uprawnień do `members`.
+
+![image](https://user-images.githubusercontent.com/77734214/144452561-54fe7595-1fc5-44aa-9fd5-e985d7b26fe3.png)
+
+Kod:
+
+```python
+import discord
+
+class MyClient(discord.Client):
+    async def on_ready(self):
+        print('Logged in as')
+        print(self.user.name)
+        print(self.user.id)
+        print('------')
+
+    async def on_member_join(self, member):
+        guild = member.guild
+        if guild.system_channel is not None:
+            to_send = 'Welcome {0.mention} to {1.name}!'.format(member, guild)
+            await guild.system_channel.send(to_send)
 
 
+intents = discord.Intents.default()
+intents.members = True
+
+client = MyClient(intents=intents)
+client.run('token')
+```
+
+Źródło: https://github.com/Rapptz/discord.py/blob/v1.7.3/examples/new_member.py

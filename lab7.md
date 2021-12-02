@@ -211,3 +211,8 @@ client.run('token')
 
 ### Uruchomienie
 Aby uruchomić bota (jeżeli plik nazywa się `bot.py`) wystarczy wpisać `python bot.py` w konsoli.
+
+
+#### Przydatne linki
+* https://pypi.org/project/python-dotenv/
+* https://discordpy.readthedocs.io/en/stable/api.html#client

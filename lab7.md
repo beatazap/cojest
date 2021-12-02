@@ -113,9 +113,6 @@ class MyClient(discord.Client):
         print(self.user.id)
         print('------')
 
-class MyClient(discord.Client):
-    async def on_ready(self):
-        print('Logged on as {0}!'.format(self.user))
 
     async def on_message(self, message):
         # we do not want the bot to reply to itself

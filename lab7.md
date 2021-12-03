@@ -176,6 +176,8 @@ class MyClient(discord.Client):
             await asyncio.sleep(60) # Zadanie jest wykonywane co 60 sekund
 ```
 
+Źródło: https://github.com/Rapptz/discord.py/blob/v1.7.3/examples/background_task_asyncio.py
+
 # Bot witający nowego członka
 Ten przykład wymaga włączenia uprawnień do `members`.
 

@@ -24,4 +24,5 @@ Pandas udostępnia struktury danych i funkcje wspierające wysoko-wydajne operac
 Biblioteka używana w uczeniu maszynowym i w głębokich sieciach neuronowych. 
 
 ✏️ https://www.tensorflow.org/tutorials/quickstart/beginner
+
 ✏️ https://www.tensorflow.org/tutorials/load_data/pandas_dataframe

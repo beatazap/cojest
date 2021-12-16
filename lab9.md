@@ -15,7 +15,7 @@
 # Zarządzanie projektem 
 
 ## Kanban
-
+Podstawowe zasady:
 * Wizualizacja
 * Ograniczenie pracy w toku
 * Zarządzanie strumieniem

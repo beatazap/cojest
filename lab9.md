@@ -102,7 +102,7 @@ class MinThread(Thread):
       
 if __name__ == "__main__":
     thread = minThread()
-    thread.run()
+    thread.start()
     # coś tu brakuje ale to zaraz :)
 ```
 
@@ -122,7 +122,7 @@ class MinThread(Thread):
       
 if __name__ == "__main__":
     thread = minThread()
-    thread.run()
+    thread.start()
     print("Hello World")
     thread.join() # <--
 ```

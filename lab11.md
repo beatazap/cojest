@@ -130,7 +130,7 @@ class Student(db.Model):
     last_name = db.Column(db.String(80), nullable=False)
 
     def __repr__(self):
-        return '<User %r>' % self.username
+        return '<Student %r>' % self.username
 ```
 Do stworzenia pustej bazy danych potrzebujemy uruchomić `flask shell` a następnie zimportować naszą aplikację i wywołać `db.create_all()`.
 

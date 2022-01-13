@@ -34,7 +34,18 @@ Metody HTTP są standardowymi metodami komunikacji w architekturze REST.
 | PUT | Utworzenie lub aktualizacja stanu danego zasobu na podstawie żądania |
 | DELETE | Żądanie usunięcia danego zasobu |
 
+
+
 ### Minimalna aplikacja Flask
+__Utwórz środowisko__
+Przed przystąpieniem do wykonywania zadań utwórz nowe środowisko w którym zainstalujesz następujące moduły:
+```
+Flask
+Flask-SQLAlchemy
+SQLAlchemy
+```
+
+__Minimalna aplikacja__
 ```python
 from flask import Flask
 app = Flask(__name__)
@@ -99,8 +110,56 @@ if __name__ == '__main__':
 
 ✏️ Dodaj do aplikacji Flask nowy endpoint dla każdej metody.
 
-#### 
+#### Obsługa Bazy Danych
+Do Obsługi bazy danych możemy wykorzystać popularny silnik ORM ([Object–relational mapping](https://pl.wikipedia.org/wiki/Mapowanie_obiektowo-relacyjne)).
 
+```python
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////./studenci.sqlite3'
+db = SQLAlchemy(app)
+
+
+class Student(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(80), unique=True, nullable=False)
+    email = db.Column(db.String(120), unique=True, nullable=False)
+    first_name = db.Column(db.String(80), nullable=False)
+    last_name = db.Column(db.String(80), nullable=False)
+
+    def __repr__(self):
+        return '<User %r>' % self.username
+```
+Do stworzenia pustej bazy danych potrzebujemy uruchomić `flask shell` a następnie zimportować naszą aplikację i wywołać `db.create_all()`.
+
+```python
+>>> from app import db
+>>> db.create_all()
+```
+
+✏️ Stwórz endpoint dla `Student` obsługujący metodę PUT lub POST w celu dodania danych przekazanych w `request.get_json()`.
+
+
+### Wysyłanie odpowiedzi w formacie JSON
+W celu sformatowania obiektu z Pythona na obiekt typu JSON należy wywołać funkcję jsonify z modułu flask
+
+Przykład (fragment):
+```python
+from flask import Flask, jsonify, request
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return jsonify({'msg': 'Witaj Świecie!'})
+        
+@app.route('/square/<int:value>', methods = ['GET'])
+def square(value):
+    return jsonify({'square_root': value**2})
+```
+
+✏️ Stwórz endpoint dla `Student` obsługujący metodę GET który zwróci listę wszystkich studentów w bazie danych.
 
 ### Testowanie 
 Jednym z narzędzi pozwalającym na przetestowanie endpointów jest [Postman](https://www.postman.com/).
@@ -108,5 +167,7 @@ Jednym z narzędzi pozwalającym na przetestowanie endpointów jest [Postman](ht
 ✏️ Zainstaluj narzędzie Postman i użyj go do wywołania dowolnego endpointu.
 
 ## Zasoby
-* https://beeceptor.com/ - Tworzenie sztucznego API
-* https://dummyapi.io/ - Tworzenie sztucznego API
+* https://beeceptor.com/ - Tworzenie sztucznego API.
+* https://dummyapi.io/ - Tworzenie sztucznego API.
+* https://flask-sqlalchemy.palletsprojects.com/en/2.x/ - Moduł pozwalający na integracje Flask z silnikiem do obsługi bazy danych przy pomocy SQLAlchemy.
+* https://flask.palletsprojects.com/en/2.0.x/api/ - Dokumentacja dla Flask'a.

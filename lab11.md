@@ -113,6 +113,7 @@ if __name__ == '__main__':
 #### Obsługa Bazy Danych
 Do Obsługi bazy danych możemy wykorzystać popularny silnik ORM ([Object–relational mapping](https://pl.wikipedia.org/wiki/Mapowanie_obiektowo-relacyjne)).
 
+Przykład (fragment):
 ```python
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy

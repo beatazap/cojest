@@ -162,6 +162,11 @@ def square(value):
 
 ✏️ Stwórz endpoint dla `Student` obsługujący metodę GET który zwróci listę wszystkich studentów w bazie danych.
 
+W Przypadku bardziej skomplikowanych modeli warto skorzystać z modułu `Marshmallow` który pozwala nam określić schemat modelu.
+
+🔍 Poszukaj informacji na temat modułu `Marshmallow`.
+
+
 ### Testowanie 
 Jednym z narzędzi pozwalającym na przetestowanie endpointów jest [Postman](https://www.postman.com/).
 
@@ -170,5 +175,6 @@ Jednym z narzędzi pozwalającym na przetestowanie endpointów jest [Postman](ht
 ## Zasoby
 * https://beeceptor.com/ - Tworzenie sztucznego API.
 * https://dummyapi.io/ - Tworzenie sztucznego API.
-* https://flask-sqlalchemy.palletsprojects.com/en/2.x/ - Moduł pozwalający na integracje Flask z silnikiem do obsługi bazy danych przy pomocy SQLAlchemy.
 * https://flask.palletsprojects.com/en/2.0.x/api/ - Dokumentacja dla Flask'a.
+* https://flask-sqlalchemy.palletsprojects.com/en/2.x/ - Moduł pozwalający na integracje Flask z silnikiem do obsługi bazy danych przy pomocy SQLAlchemy.
+* https://flask-marshmallow.readthedocs.io/en/latest/ - Moduł do serializacji i deserializacji danych.
